@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.application.parkinsonanalyser.About">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="About Parkinson's Disease"
+                android:id="@+id/about_pd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_pd"
+                android:layout_marginTop="5dp"
+                android:id="@+id/desc_pd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="About App"
+                android:layout_marginTop="25dp"
+                android:id="@+id/about_app"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_app"
+                android:layout_marginTop="5dp"
+                android:id="@+id/desc_app" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Developers"
+                android:layout_marginTop="25dp"
+                android:id="@+id/dev_app" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dev_app"
+                android:layout_marginTop="5dp"
+                android:id="@+id/dev"
+                android:layout_above="@+id/nsit"
+                android:text="Abhinav Singh, 208/COE/12\nAshish Kothari, 240/COE/12\nAyush Gupta, 248/COE/12"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:id="@+id/nsit"
+                android:textAlignment="center"
+                android:text="Final Year Project\nNetaji Subhas Institute of Technology"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+<!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/res/layout/activity_about.xml -->

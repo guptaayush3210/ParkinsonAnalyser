@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Parkinson Analyser</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="desc_pd">A progressive disease of the nervous system marked by tremor, muscular rigidity, and slow, imprecise movement, chiefly affecting middle-aged and elderly people. It is associated with degeneration of the basal ganglia of the brain and a deficiency of the neurotransmitter dopamine.</string>
+    <string name="desc_app">"This application provides an aid to patients as well as neurologists. Doctors can ask patients to take tests and judge their condition based on the test results.The app presents test results in a scientific way that is understandable by doctors.\nApp can also be used by patients to check their progress in Parkinson's Disease."</string>
+</resources>
