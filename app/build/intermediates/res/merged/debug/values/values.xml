@@ -21,13 +21,18 @@
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="background_color">#00405d</color>
+    <color name="background_color">#546E7A</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="black">#000</color>
+    <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -38,10 +43,7 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="colorAccent">#f74f88</color>
-    <color name="colorPrimary">#cbb4f3</color>
-    <color name="colorPrimaryDark">#574c68</color>
-    <color name="color_primary">#d279a6</color>
+    <color name="colorPrimaryDark">#546E7A</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
@@ -52,13 +54,18 @@
     <color name="foreground_material_light">@android:color/black</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="green">#0f0</color>
+    <color name="green">#009688</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="lighter_background">#607D8B</color>
+    <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -81,7 +88,7 @@
     <color name="primary_text_disabled_material_light">#39000000</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="red">#f00</color>
+    <color name="red">#F44336</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="ripple_material_dark">#42ffffff</color>
@@ -96,8 +103,7 @@
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <!-- From: file:/home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="try1">#fdd000</color>
-    <color name="white">#fff</color>
+    <color name="text_color">#fff</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>

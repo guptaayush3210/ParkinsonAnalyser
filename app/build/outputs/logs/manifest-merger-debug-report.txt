@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:2:1-33:12
+ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:2:1-35:12
 	xmlns:android
 		ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -18,7 +18,7 @@ ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/Andr
 	android:name
 		ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:5:22-78
 application
-ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:7:5-31:19
+ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:7:5-33:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
 	android:supportsRtl
@@ -67,6 +67,10 @@ activity#com.application.parkinsonanalyser.About
 ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:29:9-30:20
 	android:name
 		ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:29:19-40
+activity#com.application.parkinsonanalyser.SessionResult
+ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:31:9-32:20
+	android:name
+		ADDED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml:31:19-48
 uses-sdk
 INJECTED from /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/ayush/AndroidStudioProjects/ParkinsonAnalyser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43

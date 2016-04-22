@@ -45,7 +45,7 @@ public class ReactionTest extends Base {
 
         file = new File(f,"reaction.txt");
         try{
-            writer = new FileWriter(file,true);
+            writer = new FileWriter(file);
         } catch (IOException e){
             e.printStackTrace();
         }

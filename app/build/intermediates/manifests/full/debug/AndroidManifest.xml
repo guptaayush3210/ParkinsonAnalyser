@@ -34,6 +34,8 @@
         </activity>
         <activity android:name="com.application.parkinsonanalyser.About" >
         </activity>
+        <activity android:name="com.application.parkinsonanalyser.SessionResult" >
+        </activity>
     </application>
 
 </manifest>

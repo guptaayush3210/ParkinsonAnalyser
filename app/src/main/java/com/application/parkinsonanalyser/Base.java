@@ -16,6 +16,10 @@ import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
 import java.io.File;
 
 public class Base extends AppCompatActivity {
@@ -36,6 +40,7 @@ public class Base extends AppCompatActivity {
 
         getLayoutInflater().inflate(layoutResID, actContent, true);
         super.setContentView(fullLayout);
+
 
         ID = ((ParkinsonApplication) getApplicationContext()).userID;
         f = new File(getExternalFilesDir(location),ID.toString());
@@ -64,8 +69,6 @@ public class Base extends AppCompatActivity {
         drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                drawerList.getChildAt(1).setClickable(false);
-                drawerList.getChildAt(1).setAlpha((float) 0.7);
                 if (curr_section != position) {
                     curr_section = position;
                     openActivity(position);
@@ -166,7 +169,7 @@ public class Base extends AppCompatActivity {
                 startActivity(i3);
                 break;
             case 7:
-                Intent i4=new Intent(this,Home.class);
+                Intent i4=new Intent(this,SessionResult.class);
                 startActivity(i4);
                 break;
             case 8:

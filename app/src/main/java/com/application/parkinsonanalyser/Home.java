@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -47,7 +48,7 @@ public class Home extends Base {
                     }
                 }
 
-                Toast.makeText(getApplicationContext(), "User Updated", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Test Updated. You can start performing tests.", Toast.LENGTH_LONG).show();
             }
         });
     }

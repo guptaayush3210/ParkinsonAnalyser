@@ -29,7 +29,7 @@
         android:layout_marginTop="@dimen/action_bar_height"
         android:choiceMode="singleChoice"
         android:dividerHeight="1dp"
-        android:divider="@color/white"
+        android:divider="@color/text_color"
         android:background="@color/background_color"
         android:id="@+id/drawer_list" />
 

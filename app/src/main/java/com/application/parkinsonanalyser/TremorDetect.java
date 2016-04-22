@@ -21,9 +21,9 @@ import java.util.TimerTask;
 public class TremorDetect extends Base implements SensorEventListener {
 
     private SensorManager mSensorManager;
-    private Sensor mSensor;
-    private FileWriter writer_left,writer_right;
-    private File file;
+    private Sensor mSensor,gSensor;
+    private FileWriter writer_left,writer_right,gwriter_left,gwriter_right;
+    private File file, gfile;
 
     TextView hand;
     Integer testphase = 0;
@@ -37,18 +37,27 @@ public class TremorDetect extends Base implements SensorEventListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tremor_detect);
+
+
+
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        mSensorManager.registerListener(this, mSensor , SensorManager.SENSOR_DELAY_NORMAL);
+        gSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+
+        mSensorManager.registerListener(this, mSensor , SensorManager.SENSOR_DELAY_FASTEST);
+        mSensorManager.registerListener(this, gSensor, SensorManager.SENSOR_DELAY_FASTEST);
 
         hand = (TextView) findViewById(R.id.hand);
         start = (Button) findViewById(R.id.starttremor);
         submit = (Button) findViewById(R.id.submittremor);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        try {;
-            file = new File(f,"tremor_left.txt");
-            writer_left = new FileWriter(file,true);
+        try {
+            file = new File(f,"accel_left.txt");
+            gfile = new File(f, "gyro_left.txt");
+            writer_left = new FileWriter(file);
+            gwriter_left = new FileWriter(gfile);
+
         } catch (IOException e) {
             Log.d("here",e.toString());
             e.printStackTrace();
@@ -79,6 +88,7 @@ public class TremorDetect extends Base implements SensorEventListener {
                 start.setVisibility(View.GONE);
                 submit.setVisibility(View.GONE);
                 progressBar.setVisibility(View.VISIBLE);
+                hand.setText("Please Wait..Taking Readings!!!");
                 timer = 10;
                 take_readings = true;
             }
@@ -90,13 +100,17 @@ public class TremorDetect extends Base implements SensorEventListener {
                 if (testphase == 0){
                     testphase++;
                     try {
+                        gwriter_left.close();
                         writer_left.close();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                     try {
-                        file = new File(f,"tremor_right.txt");
-                        writer_right = new FileWriter(file,true);
+                        file = new File(f,"accel_right.txt");
+                        gfile = new File(f,"gyro_right.txt");
+                        writer_right = new FileWriter(file);
+                        gwriter_right = new FileWriter(gfile);
+
                     } catch (IOException e) {
                         Log.d("here", "here");
                         e.printStackTrace();
@@ -110,6 +124,7 @@ public class TremorDetect extends Base implements SensorEventListener {
                     submit.setVisibility(View.GONE);
                     try {
                         writer_right.close();
+                        gwriter_right.close();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -126,21 +141,30 @@ public class TremorDetect extends Base implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event){
-//        final double alpha = 0.8;
-        if (event.sensor.getType() != Sensor.TYPE_ACCELEROMETER || !take_readings)
-            return;
-
-        String x = event.values[0]+","+event.values[1]+","+event.values[2]+";\n";
-        try {
-            Log.d("text",x);
-            if (testphase==0) {
-                writer_left.write(x);
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER && take_readings) {
+            String x = event.values[0] + "," + event.values[1] + "," + event.values[2] + ";\n";
+            try {
+                if (testphase == 0) {
+                    writer_left.write(x);
+                } else {
+                    writer_right.write(x);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            else {
-                writer_right.write(x);
+        }
+        else if (event.sensor.getType() == Sensor.TYPE_GYROSCOPE && take_readings){
+            String x = event.values[0] + "," + event.values[1] + "," + event.values[2] + ";\n";
+            try {
+                Log.d("text2", x);
+                if (testphase == 0) {
+                    gwriter_left.write(x);
+                } else {
+                    gwriter_right.write(x);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -149,8 +173,11 @@ public class TremorDetect extends Base implements SensorEventListener {
         mSensorManager.unregisterListener(this);
         try {
             writer_left.close();
-            if (testphase == 1)
+            gwriter_left.close();
+            if (testphase == 1) {
                 writer_right.close();
+                gwriter_right.close();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -160,6 +187,7 @@ public class TremorDetect extends Base implements SensorEventListener {
     @Override
     public void onResume(){
         mSensorManager.registerListener(this, mSensor , SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(this, gSensor , SensorManager.SENSOR_DELAY_NORMAL);
         super.onResume();
     }
 

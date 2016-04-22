@@ -17,9 +17,9 @@ import java.util.TimerTask;
 public class TapCount extends Base {
 
     TextView tap_count;
-    RelativeLayout main_frame;
+    RelativeLayout main_frame,alltext;
     TextView time_left,hand;
-    Button restart,submit;
+    Button restart,submit,start;
     Integer counter = 0,timer = 10;
     final Timer t = new Timer();
 
@@ -34,9 +34,11 @@ public class TapCount extends Base {
 
         tap_count = (TextView) findViewById(R.id.tapcount);
         main_frame = (RelativeLayout) findViewById(R.id.container);
+        alltext  = (RelativeLayout) findViewById(R.id.alltext);
         time_left = (TextView) findViewById(R.id.timeleft);
         restart = (Button) findViewById(R.id.restart);
         submit = (Button) findViewById(R.id.tap_submit);
+        start = (Button) findViewById(R.id.starttap);
         hand = (TextView) findViewById(R.id.taphand);
 
         main_frame.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +48,16 @@ public class TapCount extends Base {
                     counter++;
                     tap_count.setText("Tap Count: " + counter.toString());
                 }
+            }
+        });
+
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                alltext.setVisibility(View.VISIBLE);
+                timer=10;
+                start.setVisibility(View.GONE);
             }
         });
 
@@ -78,7 +90,7 @@ public class TapCount extends Base {
 
         try {
             file = new File(f,"tap_left.txt");
-            writer_left = new FileWriter(file,true);
+            writer_left = new FileWriter(file);
         } catch (IOException e) {
             Log.d("here", "here");
             e.printStackTrace();
@@ -94,12 +106,14 @@ public class TapCount extends Base {
                     String x = counter.toString();
                     if (testphase==0) {
                         writer_left.write(x);
+                        start.setVisibility(View.VISIBLE);
+                        alltext.setVisibility(View.GONE);
                         testphase++;
                         hand.setText("RIGHT HAND");
                         writer_left.close();
                         try {
                             file = new File(f,"tap_right.txt");
-                            writer_right = new FileWriter(file,true);
+                            writer_right = new FileWriter(file);
                         } catch (IOException e) {
                             Log.d("here", "here");
                             e.printStackTrace();

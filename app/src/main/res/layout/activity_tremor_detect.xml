@@ -33,11 +33,12 @@
 
     <ProgressBar
         android:layout_width="480dp"
-        android:layout_height="wrap_content"
+        android:layout_height="3dp"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:id="@+id/progressBar"
-        android:progressTint="@color/colorPrimaryDark"
         android:visibility="gone"
+        android:progressTint="@color/background_color"
+        android:foregroundTint="@color/background_color"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
